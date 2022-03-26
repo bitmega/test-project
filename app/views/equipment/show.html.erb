@@ -1,0 +1,11 @@
+<h1><%= @equipment.name %></h1>
+<p><%= @equipment.description %></p>
+
+<div class="mb-2">
+  <h3>Images</h3>
+  <% @equipment.equipment_images.each do |equipment_image| %>
+    <%= image_tag equipment_image.image, size: "100x100" %>
+  <% end %>
+  <br />
+</div>
+<%= link_to "Add image", new_equipment_equipment_image_path(@equipment), class: "btn btn-primary" %>

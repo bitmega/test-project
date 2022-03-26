@@ -1,0 +1,16 @@
+<table class="table">
+  <thead>
+    <th>Name</th>
+    <th>Description</th>
+  </thead>
+  <tbody>
+    <% @equipments.each do |equipment| %>
+      <tr>
+        <td><%= link_to equipment.name, equipment %></td>
+        <td><%= equipment.description %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to "New equipment", new_equipment_path, class: "btn btn-primary" %>
